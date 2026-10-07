@@ -31,4 +31,8 @@ public class service {
         Financiamento f = new Financiamento(valorTotal, entrada, parcelas, prestacao);
         return repository.save(f);
     }
+
+    public List<Financiamento> listarTodos() {
+        return repository.findAll();
+    }
 }

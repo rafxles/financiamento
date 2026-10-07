@@ -22,6 +22,10 @@ public class Financiamento {
         this.entrada = entrada;
         this.parcelas = parcelas;
         this.prestacao = prestacao;
-        // os getters e setters
     }
+    public long getId() {return id;}
+    public double getValorTotal() {return valorTotal;}
+    public double getEntrada() {return entrada;}
+    public int getParcelas() {return parcelas;}
+    public double getPrestacao() {return prestacao;}
 }
