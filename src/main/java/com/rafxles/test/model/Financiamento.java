@@ -2,6 +2,7 @@ package com.rafxles.test.model;
 
 import jakarta.persistence.*;
 
+@SuppressWarnings("LombokGetterMayBeUsed")
 @Entity
 @Table(name = "financiamentos")
 public class Financiamento {
@@ -23,6 +24,7 @@ public class Financiamento {
         this.parcelas = parcelas;
         this.prestacao = prestacao;
     }
+    // getters
     public long getId() {return id;}
     public double getValorTotal() {return valorTotal;}
     public double getEntrada() {return entrada;}

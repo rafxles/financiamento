@@ -1,0 +1,15 @@
+package com.rafxles.test.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class HandlerExcecaoGlobal {
+    @SuppressWarnings("NullableProblems")
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
+        ErrorResponse error = new ErrorResponse(400, ex.getMessage());
+        return ResponseEntity.status(400).body(error);
+    }
+}
